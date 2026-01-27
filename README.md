@@ -43,11 +43,11 @@ The CLI uses colors and arrow‑key navigation to make it less painful to use.
 ```text
 stats-table-generator/
 │
-├── stats_table.py   # main CLI program
 ├── data/            # place input CSV files here
 ├── saved/           # generated output files
 ├── README.md
 ├── requirements.txt # Python dependencies
+├── stats_table.py   # main CLI program
 ```
 
 ---
