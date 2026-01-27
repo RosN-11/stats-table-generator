@@ -102,27 +102,6 @@ Example:
 6
 8
 ```
-
----
-
-## Notes on Calculations
-
-* **Population variance**:  
-
-$$
-\sigma^2 = \frac{\sum (x - \mu)^2}{n}
-$$
-
-* **Sample variance**:  
-
-$$
-s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}
-$$
-
-Standard deviation is the square root of the variance.  
-Tables use Unicode symbols (μ, σ, x̄, Σ) for readability.
-
-
 ---
 
 ## Limitations
