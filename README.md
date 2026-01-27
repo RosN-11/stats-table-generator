@@ -11,7 +11,7 @@ Both **Population** and **Sample** statistics are supported.
 
 ---
 
-## What this project does
+## Features 
 
 * Lets you input numerical data (CSV or manual)
 * Displays a raw data table with:
@@ -29,9 +29,10 @@ Both **Population** and **Sample** statistics are supported.
   * Range
   * Variance
   * Standard Deviation
-* Allows switching between **Population** and **Sample** formulas
-* Lets you change decimal precision
+* Allows switching between **Population** and **Sample** calculations
+* Adjust **decimal precision**
 * Saves results as CSV files
+* CLI is color-coded with **arrow-key navigation**
 
 The CLI uses colors and arrow‑key navigation to make it less painful to use.
 
@@ -46,6 +47,7 @@ stats-table-generator/
 ├── data/            # place input CSV files here
 ├── saved/           # generated output files
 ├── README.md
+├── requirements.txt # Python dependencies
 ```
 
 ---
@@ -53,12 +55,16 @@ stats-table-generator/
 ## Requirements
 
 * Python 3.8 or newer
-
-Python libraries used:
+* Install dependencies using the included `requirements.txt`.
 
 ```bash
-pip install pandas colorama inquirer
+pip install -r requirements.txt
 ```
+The main libraries used are:
+
+* `pandas`
+* `colorama`
+* `inquirer`
 
 ---
 
@@ -99,26 +105,31 @@ Example:
 
 ---
 
-## Notes on calculations
+## Notes on Calculations
 
-* Population variance:
+* **Population variance**:  
 
-  * σ² = Σ(x − μ)² / n
-* Sample variance:
+$$
+\sigma^2 = \frac{\sum (x - \mu)^2}{n}
+$$
 
-  * s² = Σ(x − x̄)² / (n − 1)
+* **Sample variance**:  
 
-Standard deviation is just the square root of the variance.
+$$
+s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}
+$$
 
-Unicode symbols (μ, σ, x̄, Σ) are used in the tables mostly for readability.
+Standard deviation is the square root of the variance.  
+Tables use Unicode symbols (μ, σ, x̄, Σ) for readability.
+
 
 ---
 
 ## Limitations
 
 * No handling for missing values (NaN)
-* Large datasets may not look great in the terminal
-* Unicode alignment depends on your terminal/font
+* Large datasets may not look great in the terminal or display perfectly
+* Unicode alignment may vary depending on your terminal/font
 
 ---
 
