@@ -1,0 +1,15 @@
+# PyCharm files
+.idea/
+*.iml
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+
+# Generated outputs
+saved/
